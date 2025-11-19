@@ -132,8 +132,8 @@
                 </div>
             </div>
             <div class="input-group">
-                <label for="overtimeMultiplier">Multiplicador HE (Ex: 1.5):</label>
-                <input type="number" id="overtimeMultiplier" required value="1.5" min="1" step="0.01">
+                <label for="overtimeMultiplier">Multiplicador HE (Ex: 1.0 para Sem Adicional):</label>
+                <input type="number" id="overtimeMultiplier" required value="1.0" min="1" step="0.01">
             </div>
         </div>
 
@@ -286,7 +286,7 @@
             const breakMinutes = parseFloat(document.getElementById('breakMinutes').value) || 0;
             const dailyRate = parseFloat(document.getElementById('dailyRate').value) || 0;
             const standardHours = parseFloat(document.getElementById('standardHours').value) || 8;
-            const overtimeMultiplier = parseFloat(document.getElementById('overtimeMultiplier').value) || 1.5;
+            const overtimeMultiplier = parseFloat(document.getElementById('overtimeMultiplier').value) || 1.0; // Padrão ajustado para 1.0
             
             // 2. Cálculo do Tempo (Minutos)
             let startMinutes = timeToMinutes(startTime);
